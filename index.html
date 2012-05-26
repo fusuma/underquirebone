@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" >
 		
-		<title dir="ltr">RequireJS/Backbone Boilerplate</title>
+		<title dir="ltr">Contact List tutorial</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -15,7 +15,20 @@
 		<link rel="stylesheet" media="screen" href="src/css/styles.css?v=1" >
 	</head>
 	<body>
-		<div id='content'>
+		<div id="contacts">
+			<header>
+				<div id="filter"><label>Show me:</label></div>
+				<a id="showForm" href="#">Add new contact</a>
+				<form id="addContact" action="#">
+				    <label for="photo">photo:</label><input id="photo" type="file" />
+				    <label for="type">Type:</label><input id="type" />
+				    <label for="name">Name:</label><input id="name" />
+				    <label for="address">Address:</label><input id="address" />
+				    <label for="tel">Tel:</label><input id="tel" />
+				    <label for="email">Email:</label><input id="email" />
+				    <button id="add">Add</button>
+				</form>
+			</header>
 		</div>
 		<script data-main="src/js/main.js" src="libs/js/require.js"></script>
 	</body>

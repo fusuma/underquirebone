@@ -1,17 +1,19 @@
 define([
-		'views/main-view'
+		'views/directoryView',
+		'backboneLoader',
+		'routes/contactsRouter'
 	],
 	function(
-		MainView
+		DirectoryView,
+		Backbone,
+		ContactsRouter
 	) {
 		"use strict";
 		
 		return {
 			initialize : function() {
-
-				var app = new MainView({
-					el : document.getElementById('content')
-				});
+				var contactsRouter = new ContactsRouter();
+				Backbone.history.start();
 			}
 		};
 	}
